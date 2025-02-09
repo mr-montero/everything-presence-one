@@ -229,6 +229,20 @@ number:
     on_value:
       - lambda: 'id(illuminance_sensor).update();'
 
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: ESP IP Address
+    ssid:
+      name: ESP SSID
+    bssid:
+      name: ESP BSSID
+    mac_address:
+      name: ESP Mac Address
+  - platform: debug
+    reset_reason:
+      name: "Reset Reason"
+    
 button:
   - platform: restart
     id: restart_internal
@@ -239,3 +253,4 @@ button:
     name: Safe mode
     entity_category: config
     disabled_by_default: True
+    
