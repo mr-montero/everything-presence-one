@@ -13,12 +13,12 @@ substitutions:
   uart_presence_output_disabled: "true"
   log_level: "ERROR"
 
-update:
-  - platform: http_request
-    id: update_http_request
-    name: Everything Presence One Firmware
-    source: https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-ble-manifest.json
-    disabled_by_default: true
+#update:
+#  - platform: http_request
+#    id: update_http_request
+#    name: Everything Presence One Firmware
+#    source: https://everythingsmarthome.github.io/everything-presence-one/everything-presence-one-ble-manifest.json
+#    disabled_by_default: true
 
 dashboard_import:
   package_import_url: github://mr-montero/everything-presence-one/everything-presence-one-ble.yaml@main
