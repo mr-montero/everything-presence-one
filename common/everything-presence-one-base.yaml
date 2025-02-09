@@ -126,6 +126,12 @@ binary_sensor:
     device_class: motion
     filters:
       - delayed_off:  !lambda 'return id(pir_off_latency).state * 1000.0;'
+    on_press:
+      then:
+        - light.turn_on: esp32_status_led
+    on_release:
+      then:
+        - light.turn_off: esp32_status_led
   - platform: template
     name: Occupancy
     id: occupancy
