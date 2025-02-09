@@ -46,6 +46,7 @@ light:
   - platform: status_led
     name: ESP32 status LED
     pin: GPIO32
+    id: esp32_status_led
     entity_category: config
     disabled_by_default: False
 
